@@ -45,9 +45,9 @@ El proyecto utiliza Firebase Firestore con dos colecciones principales:
 
 ## 🛠 Instalación y ejecución
 
+```bash
 1️⃣ Clonar el repositorio
 
-```bash
 git clone https://github.com/rodrigobarrios0/ProyectoFinalR_Barrios.git
 
 2️⃣ Instalar dependencias
@@ -55,7 +55,7 @@ npm install
 
 3️⃣ Ejecutar el proyecto
 npm run dev
-
+```
 📌 Estado del proyecto
 Proyecto desarrollado con fines educativos como práctica de React, manejo de estado global con Context API y persistencia de datos en Firestore.
 
