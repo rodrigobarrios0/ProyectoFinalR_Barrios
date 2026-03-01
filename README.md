@@ -56,10 +56,11 @@ npm install
 3️⃣ Ejecutar el proyecto
 npm run dev
 ```
-📌 Estado del proyecto
+## 📌 Estado del proyecto
 Proyecto desarrollado con fines educativos como práctica de React, manejo de estado global con Context API y persistencia de datos en Firestore.
 
-👨‍💻 Autor
+## 👨‍💻 Autor
+
 Rodrigo Gustavo Barrios
 📫 Rodrigobarrios_10@hotmail.com
 
