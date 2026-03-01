@@ -1,12 +1,19 @@
 import ItemCount from "./ItemCount";
 import { useCart } from "../context/CartContext";
+import Toastify from 'toastify-js';
 
 const ItemDetail = ({ id, title, description, price, image, stock = 10 }) => {
     const { addToCart } = useCart();
 
     const handleAddToCart = (quantity) => {
         if (quantity > stock) {
-            alert(`❌ Solo hay ${stock} productos disponibles`);
+            Toastify({
+                text: `❌ Solo hay ${stock} productos disponibles`,
+                duration: 3000,
+                backgroundColor: "#f44336",
+                position: "right",
+                gravity: "top"
+            }).showToast();
             return;
         }
 
@@ -19,7 +26,13 @@ const ItemDetail = ({ id, title, description, price, image, stock = 10 }) => {
             quantity
         });
 
-        alert("✅ ¡Producto agregado al carrito!");
+        Toastify({
+            text: "✅ ¡Producto agregado al carrito!",
+            duration: 3000,
+            backgroundColor: "#4CAF50",
+            position: "right",
+            gravity: "top"
+        }).showToast();
     }
 
     return (

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { migrateProducts } from "../data/importFakeStore.jsx";
+import { migrateProductsToFirestore } from "../data/importFakeStore.jsx";
 
 const MigrateButton = () => {
     const [loading, setLoading] = useState(false);
@@ -9,7 +9,7 @@ const MigrateButton = () => {
         setLoading(true);
         setMessage("Migrando datos...");
 
-        const succes = await migrateProducts();
+        const succes = await migrateProductsToFirestore();
 
         if (succes) {
             setMessage("Migración completada con éxito.");

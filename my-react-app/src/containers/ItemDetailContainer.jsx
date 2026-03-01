@@ -11,18 +11,14 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true);
         getProductById(itemId).then(data => {
-            if (data) {
-                setItem(data);
-            } else {
-                console.warn(`Producto con ID ${itemId} no encontrado`);
-            }
+            setItem(data);
             setLoading(false);
         });
     }, [itemId]);
-    
+
     if (loading) return <p className="text-center py-8">Cargando...</p>;
-    if (!item) return <p className="text-center py-8 text-red-600">Producto no encontrado</p>;
-    
+    if (!item) return <p className="text-center py-8 text-red-600">❌ Producto no encontrado</p>;
+
     return <ItemDetail {...item} />;
 };
 

@@ -1,4 +1,4 @@
-import {db} from "../context/FirebaseContext";
+import { db } from "../context/FirebaseContext";
 import { collection, query, where, getDocs, doc, getDoc } from "firebase/firestore";
 
 export const getProducts = async () => {
